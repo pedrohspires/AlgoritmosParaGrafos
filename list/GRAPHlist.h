@@ -51,7 +51,7 @@ struct node{
 
 
 // Funções ----------------------------------------------------------------------------------------
-static link Newnode(vertex w, link next); // Função exclusiva da lista de adjacências
+static link NEWnode(vertex w, link next); // Função exclusiva da lista de adjacências
 
 // Funções básicas --------------------------------------------------------------------------------
 /**
