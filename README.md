@@ -1,5 +1,5 @@
 # AlgoritmosParaGrafos
-Autor: Pedro Henrique
-Disciplina: Algoritmos para Grafos
-Professor: Alex Pontes
-Livro base: Algoritmos para Grafos, prof. Paulo Feofiloff
+Autor: Pedro Henrique<br>
+Disciplina: Algoritmos para Grafos<br>
+Professor: Alex Pontes<br>
+Livro base: Algoritmos para Grafos, prof. Paulo Feofiloff<br>
