@@ -31,14 +31,6 @@
  */
 
 // Estrutura --------------------------------------------------------------------------------------
-struct graph{
-    int V;      // Quantidade de vértices
-    int A;      // Quantidade de arcos
-    link *adj;   // Vetor de lista adjacência
-};
-typedef struct graph *Graph; // Tipo de dado abstrato de um grafo
-
-
 /**
  * Cada arco v-w é indicado por uma lista onde "v" é o índice do vetor
  * e "w" é um nó de uma lista representada por:
@@ -48,6 +40,17 @@ struct node{
     vertex w;   // Vértice final do arco
     link next;  // Próximo vértice que também faz arco com "v"
 };
+
+/**
+ * Uma lista é representada por uma estrutura com V vértices, A arcos e um vetor de links
+ * indexados pelos vértices.
+ */
+struct graph{
+    int V;      // Quantidade de vértices
+    int A;      // Quantidade de arcos
+    link *adj;   // Vetor de lista adjacência
+};
+typedef struct graph *Graph; // Tipo de dado abstrato de um grafo
 
 
 // Funções ----------------------------------------------------------------------------------------
