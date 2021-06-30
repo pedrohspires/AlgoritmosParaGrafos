@@ -63,12 +63,6 @@ static link NEWnode(vertex w, link next); // Função exclusiva da lista de adja
 Graph GRAPHinit(int V);
 
 /**
- * Aloca uma matriz com "r" linhas e "c" colunas e preenche cada
- * posição com "val" valores.
- */
-static int **MATRIXint(int r, int c, int val);
-
-/**
  * Insere um arco v-w no grafo "G".
  */
 void GRAPHinsertArc(Graph G, vertex v, vertex w);
