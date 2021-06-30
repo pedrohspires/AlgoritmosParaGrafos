@@ -5,6 +5,7 @@
  * Disciplina de Algoritmos para Grafos
  * Professor: Alex Pontes
  */
+#include <stdbool.h>
 
 // Tipo de dado -----------------------------------------------------------------------------------
 /**
