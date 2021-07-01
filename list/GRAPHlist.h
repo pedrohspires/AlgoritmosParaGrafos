@@ -116,7 +116,7 @@ void GRAPHindegs(Graph G, int indeg[]);
  * Calcula o grau de saída de todos os vértices do grafo "G"
  * e armazena no vetor "outdeg[]".
  */
-void GRAPHindegs(Graph G, int outdeg[]);
+void GRAPHoutdegs(Graph G, int outdeg[]);
 
 /**
  * Desaloca o grafo e libera a memória ocupada por ele.
