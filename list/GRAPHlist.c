@@ -88,3 +88,15 @@ void GRAPHisSource(Graph G){
         }
     }
 }
+
+int GRAPHindeg(Graph G, vertex v){
+    int count = 0;
+    for(vertex vv = 0; vv<G->V; vv++){
+        for(link a = G->adj[vv]; a!=NULL; a=a->next){
+            if(a->w == v)
+                count++;
+        }
+    }
+    return count;
+}
+
