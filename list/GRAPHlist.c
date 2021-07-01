@@ -106,3 +106,8 @@ int GRAPHoutdeg(Graph G, vertex v){
         count++;
     return count;
 }
+
+void GRAPHindegs(Graph G, int indeg[]){
+    for(vertex v = 0; v<G->V; v++)
+        indeg[v] = GRAPHindeg(G, v);
+}
