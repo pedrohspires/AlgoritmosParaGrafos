@@ -43,3 +43,32 @@ void GRAPHshow(Graph G){
         printf("\n");
     }
 }
+
+int isSink[1000];
+void GRAPHisSink(Graph G){
+    for(vertex v = 0; v<G->V; v++){
+        isSink[v] = 1;
+        for(int w = 0; w<G->V; w++){
+            if(G->adj[v][w] == 1){
+                isSink[v] = 0;
+                break;
+            }
+        }
+        if(isSink[v] == 1){
+            isSink[v] = 0;
+            for(int w = 0; w<G->V; w++)
+                if(G->adj[w][v] == 1){
+                    isSink[v] = 1;
+                    break;
+                }
+        }
+    }
+}
+
+/**
+ *    0 1 2 3
+ * 0: 0 1 0 1
+ * 1: 0 0 0 0
+ * 2: 1 0 1 0
+ * 3: 1 1 1 1
+ */
