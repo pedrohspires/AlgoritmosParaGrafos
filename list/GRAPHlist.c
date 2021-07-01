@@ -100,3 +100,9 @@ int GRAPHindeg(Graph G, vertex v){
     return count;
 }
 
+int GRAPHoutdeg(Graph G, vertex v){
+    int count = 0;
+    for(link a = G->adj[v]; a!=NULL; a = a->next)
+        count++;
+    return count;
+}
