@@ -65,10 +65,24 @@ void GRAPHisSink(Graph G){
     }
 }
 
-/**
- *    0 1 2 3
- * 0: 0 1 0 1
- * 1: 0 0 0 0
- * 2: 1 0 1 0
- * 3: 1 1 1 1
- */
+int isSource[1000];
+void GRAPHisSource(Graph G){
+    for(vertex v = 0; v<G->V; v++){
+        isSource[v] = 1;
+        for(vertex w = 0; w<G->V; w++){
+            if(G->adj[w][v] == 1){
+                isSource[v] = 0;
+                break;
+            }
+        }
+        if(isSource[v] == 1){
+            isSource[v] = 0;
+            for(vertex w = 0; w<G->V; w++){
+                if(G->adj[v][w] == 1){
+                    isSource[v] = 1;
+                    break;
+                }
+            }
+        }
+    }
+}
