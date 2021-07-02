@@ -33,12 +33,14 @@ void GRAPHremoveArc(Graph G, vertex v, vertex w){
     if(old->w == w){
         G->adj[v] = old->next;
         free(old);
+        G->A--;
         return;
     }
     for(link a = old; a!=NULL; a = a->next){
         if(a->w == w){
             old->next = a->next;
             free(a);
+            G->A--;
             return;
         }
         old = a;
