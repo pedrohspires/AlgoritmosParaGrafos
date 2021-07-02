@@ -116,3 +116,18 @@ void GRAPHoutdegs(Graph G, int outdeg[]){
     for(vertex v = 0; v<G->V; v++)
         outdeg[v] = GRAPHoutdeg(G, v);
 }
+
+void GRAPHdestroy(Graph G){
+    for(vertex v = 0; v<G->V; v++){
+        link a = G->adj[v], old;
+        while(a != NULL){
+            old = a;
+            a = a->next;
+            free(old);
+            old = NULL;
+        }
+    }
+    G->A = 0;
+    G->V = 0;
+    free(G->adj);
+}
