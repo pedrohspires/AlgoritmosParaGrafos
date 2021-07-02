@@ -128,3 +128,15 @@ void GRAPHdestroy(Graph G){
     G->V = 0;
     free(G->adj);
 }
+
+bool GRAPHequal(Graph G, Graph H){
+    if(G->V != H->V || G->A != H->A)
+        return false;
+
+    for(vertex v = 0; v<G->V; v++)
+        for(vertex w = 0; w<G->V; w++)
+            if(G->adj[v][w] != H->adj[v][w])
+                return false;
+    
+    return true;
+}
