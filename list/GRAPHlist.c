@@ -133,3 +133,22 @@ void GRAPHdestroy(Graph G){
     G->V = 0;
     free(G->adj);
 }
+
+bool GRAPHequal(Graph G, Graph H){
+    if(G->V != H->V || G->A != H->A)
+        return false;
+    for(vertex v = 0; v<G->V; v++){
+        for(link a = G->adj[v]; a!=NULL; a = a->next){
+            bool equal = false; // O arco pode estar em posições diferentes na lista
+            for(link b = H->adj[v]; b!=NULL; b = b->next){ // passa por todos os arcos v-w do grafo H
+                if(a->w == b->w){
+                    equal = true;
+                    break;
+                }
+            }
+            if(!equal) // se não existir nenhum arco v-w em H, mas existir em G, retorna false
+                return false;
+        }
+    }
+    return true;
+}
