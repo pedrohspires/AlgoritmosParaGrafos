@@ -86,3 +86,14 @@ void GRAPHisSource(Graph G){
         }
     }
 }
+
+int GRAPHindeg(Graph G, vertex v){
+    int count = 0;
+    for(vertex vG = 0; vG<G->V; vG++){
+        for(vertex w = 0; w<G->V; w++){
+            if(G->adj[w][vG] == 1 && v == vG)
+                count++;
+        }
+    }
+    return count;
+}
