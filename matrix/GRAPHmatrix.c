@@ -97,3 +97,14 @@ int GRAPHindeg(Graph G, vertex v){
     }
     return count;
 }
+
+int GRAPHoutdeg(Graph G, vertex v){
+    int count = 0;
+    for(vertex vG = 0; vG<G->V; vG++){
+        for(vertex w = 0; w<G->V; w++){
+            if(G->adj[vG][w] == 1 && v == vG)
+                count++;
+        }
+    }
+    return count;
+}
