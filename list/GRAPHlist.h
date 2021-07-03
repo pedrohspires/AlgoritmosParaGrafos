@@ -133,3 +133,18 @@ bool GRAPHequal(Graph G, Graph H);
 /**
  * As funções deste exercício estão na área das funções básicas
 */
+
+
+// Grafos Aleatórios ------------------------------------------------------------------------------
+/**
+ * Constrói um grafo aleatório com exatamente A arcos
+ * Não indicado para grafos densos por consumir muita
+ * tempo.
+ */
+Graph GRAPHrand(int V, int A);
+
+/**
+ * Constrói um grafo aleatório com A arcos em média.
+ * Ideal para construir grafos densos.
+ */
+Graph GRAPHrandER(int V, int A);
