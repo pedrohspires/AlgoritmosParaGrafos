@@ -118,3 +118,18 @@ void GRAPHdestroy(Graph G);
  * Verifica se os grafos "G" e "H" são iguais
  */
 bool GRAPHequal(Graph G, Graph H);
+
+
+// Grafos Aleatórios ------------------------------------------------------------------------------
+/**
+ * Constrói um grafo aleatório com exatamente A arcos
+ * Não indicado para grafos densos por consumir muita
+ * tempo.
+ */
+Graph GRAPHrand(int V, int A);
+
+/**
+ * Constrói um grafo aleatório com A arcos em média.
+ * Ideal para construir grafos densos.
+ */
+Graph GRAPHrandER(int V, int A);
